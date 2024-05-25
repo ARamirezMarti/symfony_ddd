@@ -1,3 +1,4 @@
 vendor
 .mysql-data
 var
+.php-cs-fixer.cache
