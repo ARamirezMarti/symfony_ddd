@@ -3,7 +3,7 @@ FROM php:8.1-fpm
 ARG UID
 
 # Create user and some useful stuff
-RUN adduser -u ${UID} --disabled-password --gecos "" appuser
+RUN useradd -m appuser
 RUN mkdir /home/appuser/.ssh
 RUN chown -R appuser:appuser /home/appuser/
 RUN echo "StrictHostKeyChecking no" >> /home/appuser/.ssh/config
