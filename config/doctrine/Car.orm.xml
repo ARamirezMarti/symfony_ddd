@@ -1,0 +1,13 @@
+<!-- config/doctrine/Car.orm.xml -->
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                                      http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="App\Domain\Entity\Car" table="cars">
+            <id name="uuid" type="string" column="uuid" length="36" />
+            <field name="name" type="string" column="name" length="255"/>
+            <field name="wheelCount" type="integer" column="wheel_count"/>
+    </entity>
+
+</doctrine-mapping>
