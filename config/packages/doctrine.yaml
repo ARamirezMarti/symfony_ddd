@@ -8,6 +8,12 @@ doctrine:
 
         profiling_collect_backtrace: '%kernel.debug%'
         use_savepoints: true
+        
+        types:
+            name: App\Infrastructure\Doctrine\Types\NameType
+            wheel: App\Infrastructure\Doctrine\Types\WheelType
+
+
     orm:
         auto_generate_proxy_classes: true
         enable_lazy_ghost_objects: true
@@ -22,6 +28,9 @@ doctrine:
                 dir: '%kernel.project_dir%/config/doctrine'
                 prefix: 'App\Domain\Entity'
                 alias: App
+    
+
+            
 
 when@test:
     doctrine:

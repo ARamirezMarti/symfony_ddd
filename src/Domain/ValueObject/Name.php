@@ -9,13 +9,18 @@ class Name
         // TODO add validations
     }
 
-    public static function fromString(string $name)
+    public static function fromString(string $name): self
     {
         return new static($name);
     }
 
   
-    public function getName()
+    public function value(): string
+    {
+        return $this->name;
+    }
+    
+    public function __toString(): string
     {
         return $this->name;
     }

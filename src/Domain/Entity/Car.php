@@ -2,41 +2,33 @@
 
 namespace App\Domain\Entity;
 
+use App\Domain\ValueObject\Wheel;
+use App\Domain\ValueObject\Name;
+use Ramsey\Uuid\UuidInterface;
+
 class Car
 {
     public function __construct(
-        private string $uuid,
-        private string $name,
-        private int $wheelCount,
+        private UuidInterface $uuid,
+        private Name $name,
+        private Wheel $wheel,
     ) {
     }
 
-    public function getId(): string
+    public function getId(): UuidInterface
     {
         return $this->uuid;
     }
 
-    public function getName(): string
+    public function getName(): Name
     {
         return $this->name;
     }
 
-    public function setName(string $name): self
-    {
-        $this->name = $name;
 
-        return $this;
+    public function getWheels(): Wheel
+    {
+        return $this->wheel;
     }
 
-    public function getWheelCount(): int
-    {
-        return $this->wheelCount;
-    }
-
-    public function setWheelCount(int $wheelCount): self
-    {
-        $this->wheelCount = $wheelCount;
-
-        return $this;
-    }
 }

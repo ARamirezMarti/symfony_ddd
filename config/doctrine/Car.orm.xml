@@ -7,7 +7,7 @@
     <entity name="App\Domain\Entity\Car" table="cars">
             <id name="uuid" type="string" column="uuid" length="36" />
             <field name="name" type="string" column="name" length="255"/>
-            <field name="wheelCount" type="integer" column="wheel_count"/>
+            <field name="wheel" type="string" column="wheel_count"/>
     </entity>
 
 </doctrine-mapping>
