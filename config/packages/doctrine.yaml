@@ -10,6 +10,7 @@ doctrine:
         use_savepoints: true
         
         types:
+            UuidRamsey: App\Infrastructure\Doctrine\Types\UuidRamseyType
             name: App\Infrastructure\Doctrine\Types\NameType
             wheel: App\Infrastructure\Doctrine\Types\WheelType
 

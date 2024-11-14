@@ -6,7 +6,7 @@ class Name
 {
     public function __construct(private string $name)
     {
-        // TODO add validations
+        
     }
 
     public static function fromString(string $name): self

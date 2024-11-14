@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Domain\CommandBus;
+namespace App\Infrastructure\Messenger;
 
+use App\Domain\CommandBus\CommandBusInterface;
 use Symfony\Component\Messenger\MessageBusInterface;
 
 final class CommandBus implements CommandBusInterface

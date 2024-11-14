@@ -17,7 +17,7 @@ class NameType extends Type
 
     public function convertToPHPValue($value, AbstractPlatform $platform): ?Name
     {
-        return $value !== null ? Name::fromString($value) : null;
+        return Name::fromString($value) ;
     }
 
     public function convertToDatabaseValue($value, AbstractPlatform $platform): ?string

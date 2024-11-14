@@ -15,20 +15,29 @@ class Car
     ) {
     }
 
-    public function getId(): UuidInterface
+    public function id(): UuidInterface
     {
         return $this->uuid;
     }
 
-    public function getName(): Name
+    public function name(): Name
     {
         return $this->name;
     }
 
 
-    public function getWheels(): Wheel
+    public function wheels(): Wheel
     {
         return $this->wheel;
+    }
+
+    public function toArray(): array
+    {
+        return [
+            'uuid' => $this->id()->__tostring(),
+            'name' => $this->name()->value(),
+            'wheels' => $this->wheels()->value()
+        ];
     }
 
 }
