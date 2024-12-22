@@ -34,3 +34,10 @@ services:
         tags:
             - { name: messenger.message_handler, bus: query.bus }
 
+    # RabbitMQ
+    App\Infrastructure\Queue\Rabbit\RabbitConnection:
+        arguments:
+        - host: '%env(RABBITMQ_HOST)%'
+          port: '%env(RABBITMQ_PORT)%'          
+          login: '%env(RABBITMQ_LOGIN)%'
+          password: '%env(RABBITMQ_PASSWORD)%'
